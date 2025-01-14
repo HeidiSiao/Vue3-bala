@@ -1,0 +1,36 @@
+@import './main.css';
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3c3642;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  border: 2px solid #6eceda;
+  background-color: beige;
+  font-weight: 500;
+  color: steelblue;
+  padding: 6px 4px;
+}
+
+p {
+  font-weight: 500;
+  color: steelblue;
+}
+
+button {
+  margin-block: 6px;
+}
+
+.guessBtn {
+  margin: 6px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #588b71;
+  border: 2px solid #c9decf;
+  border-radius: 8%;
+}
