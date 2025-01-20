@@ -56,8 +56,8 @@ const handleSubmit = async () => {
 
     const data = await res.json();
     console.log(`成功回應：${data}`);
-    // 換行會失敗！refMsg.value = `Your message: "${data.id}, ${data.title}" \n already submitted!`;
-    refMsg.value = `Your message: ID:${data.id}, Title:${data.title} \n already submitted!`;
+    refMsg.value = `Your message: "${data.id}, ${data.title}" \n already submitted!`;
+    // refMsg.value = `Your message: ID:${data.id}, Title:${data.title} \n already submitted!`;
     showMsg.value = data;
 
     title.value = '';

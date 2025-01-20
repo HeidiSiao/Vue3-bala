@@ -21,7 +21,7 @@ input {
   font-weight: 500;
   color: steelblue;
   padding: 6px 4px;
-  margin-top: 4px;
+  margin-block: 3px;
 }
 
 textarea {

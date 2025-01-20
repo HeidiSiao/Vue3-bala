@@ -40,6 +40,7 @@ const colorToggle = () => {
 }
 
 .bar {
+  margin-block: 3px;
   height: 20px; /* 較為常見的開關高度 */
   width: 48px;
   display: inline-block;
