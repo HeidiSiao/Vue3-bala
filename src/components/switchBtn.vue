@@ -49,7 +49,7 @@ const colorToggle = () => {
   transition: background-color 0.3s;
 }
 .controlBtn {
-  display: inline-block;
+  display: block;
   width: 20px;
   height: 20px;
   border-radius: 50%;

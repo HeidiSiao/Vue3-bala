@@ -2,6 +2,7 @@
 import DocStudy from './components/docStudy.vue';
 import WatchTest from './components/watchTest.vue';
 import SwitchBtn from './components/switchBtn.vue';
+import EventTry from './components/eventTry.vue';
 
 import { ref } from 'vue';
 
@@ -17,6 +18,8 @@ const onColorToggle = (btnActive) => {
       <DocStudy />
       <WatchTest />
       <SwitchBtn @colorToggle="onColorToggle" />
+      <hr />
+      <EventTry />
     </section>
   </div>
 </template>

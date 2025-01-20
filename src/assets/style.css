@@ -4,7 +4,14 @@ h2 {
   font-size: 18px;
   font-weight: bold;
   color: #3c3642;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #6f5f7f;
+  margin-bottom: 2px;
 }
 
 input {
@@ -14,6 +21,13 @@ input {
   font-weight: 500;
   color: steelblue;
   padding: 6px 4px;
+  margin-top: 4px;
+}
+
+textarea {
+  border: 2px solid #6eceda;
+  background-color: beige;
+  margin-block: 4px;
 }
 
 p {
@@ -22,7 +36,14 @@ p {
 }
 
 button {
-  margin-block: 6px;
+  display: block;
+  margin-block: 3px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #b1667e;
+  border: 2px solid burlywood;
+  border-radius: 8%;
 }
 
 .guessBtn {
