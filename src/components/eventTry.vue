@@ -9,7 +9,12 @@
     <button type="submit">submit</button>
   </form>
 
-  <p v-if="refMsg">{{ refMsg }}</p>
+  <!-- 方法1 <pre> 標籤本身會保留字串中的所有空格和換行 -->
+  <!-- <p v-if="refMsg">
+    <pre>{{ refMsg }}</pre>
+</p> -->
+
+  <p v-if="refMsg" class="break">{{ refMsg }}</p>
 
   <div v-if="showMsg">
     <h3>【Message Data】</h3>
@@ -37,16 +42,19 @@ const handleSubmit = async () => {
     return;
   }
 
+  // 包起來 -> JSON.stringify(data)
+  const data = {
+    title: title.value,
+    body: content.value,
+    id: 1,
+  };
+
   // 發送請求
   try {
     const res = await fetch(url, {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        title: title.value,
-        body: content.value,
-        id: 1,
-      }),
+      body: JSON.stringify(data),
     });
 
     if (!res.ok) {
@@ -54,11 +62,12 @@ const handleSubmit = async () => {
       return;
     }
 
-    const data = await res.json();
-    console.log(`成功回應：${data}`);
-    refMsg.value = `Your message: "${data.id}, ${data.title}" \n already submitted!`;
-    // refMsg.value = `Your message: ID:${data.id}, Title:${data.title} \n already submitted!`;
-    showMsg.value = data;
+    const resData = await res.json();
+    console.log(`成功回應：${resData}`);
+    refMsg.value = `Your message: "${resData.id}, ${resData.title}"
+already submitted!`;
+    // refMsg.value = `Your message: ID:${resData.id}, Title:${resData.title} \n already submitted!`;
+    showMsg.value = resData;
 
     title.value = '';
     content.value = '';
@@ -68,3 +77,10 @@ const handleSubmit = async () => {
   }
 };
 </script>
+
+<style scoped>
+/* 方法2 */
+.break {
+  white-space: pre-line;
+}
+</style>
