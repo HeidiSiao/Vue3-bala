@@ -3,6 +3,7 @@ import DocStudy from './components/docStudy.vue';
 import WatchTest from './components/watchTest.vue';
 import SwitchBtn from './components/switchBtn.vue';
 import EventTry from './components/eventTry.vue';
+import FoodList from './components/foodList.vue';
 
 import { ref } from 'vue';
 
@@ -14,12 +15,14 @@ const onColorToggle = (btnActive) => {
 
 <template>
   <div id="app" :class="{ themeActive: themeActive }">
-    <section class="wrap">
+    <section>
       <DocStudy />
       <WatchTest />
       <SwitchBtn @colorToggle="onColorToggle" />
       <hr />
       <EventTry />
+      <hr />
+      <FoodList />
     </section>
   </div>
 </template>

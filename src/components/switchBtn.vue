@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import { ref, defineEmits } from 'vue';
+import { ref } from 'vue';
 
 // 不想把邏輯寫在computed 但想要切換屬性 >按鈕切換顏色
 // 按鈕切換背景
