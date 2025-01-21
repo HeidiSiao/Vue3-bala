@@ -4,7 +4,7 @@ import WatchTest from './components/watchTest.vue';
 import SwitchBtn from './components/switchBtn.vue';
 import EventTry from './components/eventTry.vue';
 import FoodList from './components/foodList.vue';
-
+import CheckBox from './components/checkBox.vue';
 import { ref } from 'vue';
 
 const themeActive = ref(false);
@@ -21,6 +21,7 @@ const onColorToggle = (btnActive) => {
       <SwitchBtn @colorToggle="onColorToggle" />
       <hr />
       <EventTry />
+      <CheckBox />
       <hr />
       <FoodList />
     </section>
