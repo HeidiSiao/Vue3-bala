@@ -40,8 +40,7 @@ setTimeout(() => {
   margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  justify-content: space-between;
+  gap: 4px;
 }
 .img-wrap {
   width: 250px;
