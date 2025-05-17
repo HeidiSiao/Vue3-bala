@@ -23,6 +23,7 @@ const onColorToggle = (isBtnActive) => {
       <SwitchBtn @colorToggle="onColorToggle" />
       <hr />
       <EventTry />
+      <hr />
       <CheckBox />
       <hr />
       <FoodList />

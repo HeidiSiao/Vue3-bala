@@ -1,17 +1,4 @@
 <template>
-  <div>
-    <input
-      id="checked"
-      class="checkbox"
-      type="radio"
-      v-model="isChecked"
-      :true-value="showOn"
-      :false-value="showOff"
-    />
-    <label for="checked">這裡有勾勾</label>
-    <p>{{ isChecked }}</p>
-  </div>
-
   <div style="border: 2px dotted burlywood; margin-block: 4px; padding-inline: 6px">
     <h3>Choose Your Language:</h3>
     <!-- 條件false，元素被隱藏（display: none），但仍存在。 -->
@@ -36,10 +23,6 @@
 
 <script setup>
 import { computed, ref } from 'vue';
-
-const isChecked = ref('沒勾勾');
-const showOn = ref('打勾勾');
-const showOff = ref('不勾勾');
 
 const multiCheck = ref([]);
 const isSelected = computed(() => multiCheck.value.length > 0);
