@@ -3,7 +3,7 @@
     <input
       id="checked"
       class="checkbox"
-      type="checkbox"
+      type="radio"
       v-model="isChecked"
       :true-value="showOn"
       :false-value="showOff"
@@ -21,7 +21,10 @@
     <p v-show="isSelected">
       {{ multiCheck.join(' ') }}
     </p>
-
+    <!-- 但當表單提交時，假設複選框未選中，瀏覽器根本不會提交該複選框，
+     因為複選框未選中時，瀏覽器不會包含它的值。用radio替代一定會有值被提交 
+     如果需要在「選中」和「未選中」兩種情況下都提交值，使用單選按鈕更適合。
+     文件建議的核心是：表單提交時，單選按鈕比複選框更能確保提交結果的完整性 -->
     <input id="eg" v-model="multiCheck" value="English" type="checkbox" />
     <label for="eg">English</label>
     <input id="ch" v-model="multiCheck" value="Chinese" type="checkbox" />
